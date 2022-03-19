@@ -1,14 +1,15 @@
 module.exports = {
+
   /**
- * Paginação para Sequelize (raw = true, forçado)
- * @param {object} sequilize  Sequelize
- * @param {object} model      Model Sequelize
- * @param {object} options    Sequilize Options
- * @param {number} limit      Limite de resultados por pagina
- * @param {number} page       Pagina desejada, se null === 1
- * @param {object} [req]      Opcional, objeto req do Express, se informado retorna currentPageLink, nextPagelink, previousPageLink
- * @returns {Promise}
- */
+   * Paginação para Sequelize (raw = true, forçado)
+   * @param {object} sequilize  Sequelize
+   * @param {object} model      Model Sequelize
+   * @param {object} options    Sequilize Options
+   * @param {number} limit      Limite de resultados por pagina
+   * @param {number} page       Pagina desejada, se null === 1
+   * @param {object} [req]      Opcional, objeto req do Express, se informado retorna currentPageLink, nextPagelink, previousPageLink
+   * @returns {Promise}
+   */
   paginate: (sequelize, model, options, limit, page, req) => new Promise((resolve, reject) => {
     (async () => {
       try {
@@ -86,5 +87,6 @@ module.exports = {
         reject(error);
       }
     })();
-  }),
+  })
+
 };

@@ -1,5 +1,9 @@
-function ValidadorDTO(mensagem){
-    this.mensagem = mensagem;
+class ValidadorDTO {
+
+    constructor(mensagem) {
+        this.mensagem = mensagem;
+    }
+
 }
 
 module.exports = ValidadorDTO;

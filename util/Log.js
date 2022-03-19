@@ -9,7 +9,35 @@ try {
   config = { state: 'production', maxLogLength: 100 };
 }
 
+// LOG
+/**
+ * Fuçao responsável pelos console.logs
+ * 
+ * Requer o arquivo de configuração AppRoot/config/log.json com o conteúdo
+ * 
+ * ```
+ * { state: 'production', endCleanAfter: 30000 }
+ * ```
+ * 
+ * Use state:production para produção
+ * 
+ * Use state:developement ou utilze NODE_ENV === development para desenvolvimento
+ * 
+ * @example
+ * const { Log } = require('brcap-utils);
+ * const log  = new Log('Nome do script ou função');
+ * log.info('Algo muito importante');   // <-- log.info vai sempre logar tanto em dev com em prd
+ * log.debug('Algo muito importante');  // <-- log.debug registra um log.debug / dev vai printar imediatamente
+ * log.error('Ocorreu um erro');        // <-- log.error vai loggar todos os log.debug registrados e o log.error
+ * // Passe adiante o objeto "log" (expl: minhaFuncao(arg1, arg2, log)) para manter os registros do log juntos
+ */
+
 class Log {
+
+  /**
+   * 
+   * @param {string} script Nome do script ou função
+   */
   constructor(script = 'NO SCRIPT DEFINED') {
     this.script = script;
     this.maxLogLength = config.maxLogLength;

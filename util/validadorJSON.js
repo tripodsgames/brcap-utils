@@ -1,9 +1,5 @@
 let { Validator } = require('jsonschema');
-let fs = require('fs');
-
 let validator = new Validator();
-
-const BUCKET_SCHEMA = 'brasilcap-schema-agreement';
 const UTF_8 = 'utf8';
 
 module.exports = class validadorJSON {
@@ -12,6 +8,13 @@ module.exports = class validadorJSON {
      * @param  {json} payload
      * @param  {callback} callback
      */
+
+  /**
+   * 
+   * @param {any} schema 
+   * @param {string} payload 
+   * @param {callback} callback 
+   */
   static validateSchemaSqs(schema, payload, callback) {
     let listValidacao = validarRequestSchemaSqs(schema, payload);
     if (listValidacao.length == 0) {
