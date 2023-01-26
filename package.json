@@ -10,13 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   },
   "dependencies": {
     "brcap-aws": "^1.4.11",
-    "eslint": "^5.15.3",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
     "fast-memoize": "^2.5.2",
     "jsonschema": "^1.2.4",
     "moment": "^2.22.2",
