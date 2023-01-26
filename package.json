@@ -1,6 +1,6 @@
 {
   "name": "brcap-utils",
-  "version": "1.3.17",
+  "version": "2.0.0",
   "description": "Biblioteca utilitária utilizada pela equipe de desenvolvimento da Brasil Cap",
   "main": "index.js",
   "scripts": {
